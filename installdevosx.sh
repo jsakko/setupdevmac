@@ -44,6 +44,8 @@ echo 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> $HOME/.z
 brew install findutils
 echo 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> $HOME/.zshrc
 brew install diffutils
+brew install grep
+echo 'export PATH="$(brew --prefix grep)/libexec/gnubin:$PATH"' >> $HOME/.zshrc
 
 #Enable showing of hidden folders
 defaults write com.apple.finder AppleShowAllFiles YES
