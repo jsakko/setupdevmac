@@ -20,7 +20,6 @@ brew cask install iterm2 cathode
 brew cask install google-chrome
 
 brew install maven
-brew install jenv
 
 brew install clojure
 
@@ -39,6 +38,7 @@ brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # GNU Command Line Tools instead of BSD versions
+echo '\n# GNU Command Line Tools instead of BSD versions:' >> $HOME/.zshrc
 brew install coreutils
 echo 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> $HOME/.zshrc
 brew install findutils
@@ -46,6 +46,17 @@ echo 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> $HOME/.z
 brew install diffutils
 brew install grep
 echo 'export PATH="$(brew --prefix grep)/libexec/gnubin:$PATH"' >> $HOME/.zshrc
+
+# Install and configure JENV
+echo '\n# JENV configurations:' >> $HOME/.zshrc
+brew install jenv
+echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> $HOME/.zshrc
+echo 'eval "$(jenv init -)"' >> $HOME/.zshrc
+# Must reload shell so that plugins can be enabled
+source $HOME/.zshrc
+jenv enable-plugin maven
+jenv enable-plugin export
+
 
 #Enable showing of hidden folders
 defaults write com.apple.finder AppleShowAllFiles YES
