@@ -16,7 +16,9 @@ brew cask install postman
 brew cask install slack
 brew cask install virtualbox
 
-brew cask install iterm2 cathode
+brew cask install iterm2
+# Terminal emulator with vintage looks
+# brew cask install cathode
 brew cask install google-chrome
 
 brew install maven
