@@ -5,7 +5,8 @@ echo "##### Start install #####"
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew tap homebrew/cask && brew update
+brew tap homebrew/cask
+brew update
 
 brew cask install java
 brew cask install docker
@@ -17,8 +18,8 @@ brew cask install slack
 brew cask install virtualbox
 
 brew cask install iterm2
-# Terminal emulator with vintage looks
-# brew cask install cathode
+# Terminal emulator made with electron/js
+brew cask install hyper
 brew cask install google-chrome
 
 brew install maven
@@ -58,7 +59,6 @@ echo 'eval "$(jenv init -)"' >> $HOME/.zshrc
 source $HOME/.zshrc
 jenv enable-plugin maven
 jenv enable-plugin export
-
 
 #Enable showing of hidden folders
 defaults write com.apple.finder AppleShowAllFiles YES
