@@ -2,10 +2,6 @@
 
 echo "##### Start install #####"
 
-# Install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew tap homebrew/cask
 brew update
 
 brew cask install java
@@ -26,19 +22,10 @@ brew install maven
 
 brew install clojure
 
-brew install macvim --override-system-vim --custom-system-icons
-brew install vim --override-system-vi
+brew install macvim
 brew install git 
 brew install wget
 brew install unzip
-
-# Zsh shell
-brew install zsh
-# brew install zsh-completions
-# brew install zsh-syntax-highlighting
-
-#Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # GNU Command Line Tools instead of BSD versions
 echo '\n# GNU Command Line Tools instead of BSD versions:' >> $HOME/.zshrc
