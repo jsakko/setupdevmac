@@ -12,6 +12,9 @@ brew cask install visual-studio-code
 brew cask install postman
 brew cask install slack
 brew cask install virtualbox
+brew cask install atom
+brew cask install keepassx
+brew cask install firefox
 
 brew cask install iterm2
 # Terminal emulator made with electron/js
