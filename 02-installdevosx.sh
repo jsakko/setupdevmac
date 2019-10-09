@@ -22,6 +22,8 @@ brew install maven
 
 brew install clojure
 
+brew install python
+
 brew install macvim
 brew install git 
 brew install wget
