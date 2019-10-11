@@ -56,5 +56,7 @@ jenv enable-plugin export
 defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder
 
+echo 'export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home'
+
 echo "###### END INSTALL ######"
 exit 0
