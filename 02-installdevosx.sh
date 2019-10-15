@@ -59,6 +59,9 @@ jenv add $(/usr/libexec/java_home)
 brew cask install java11
 jenv add $(/usr/libexec/java_home -v11)
 
+
+# https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot
+
 #Enable showing of hidden folders
 defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder
