@@ -25,7 +25,7 @@ brew install clojure
 brew install python
 
 brew install macvim
-brew install git 
+brew install git
 brew install wget
 brew install unzip
 # Good replacement fro grep
@@ -33,14 +33,15 @@ brew install ack
 
 
 # GNU Command Line Tools instead of BSD versions
+COREUTILSPATH=$(brew --prefix coreutils)
 echo '\n# GNU Command Line Tools instead of BSD versions:' >> $HOME/.zshrc
 brew install coreutils
-echo 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> $HOME/.zshrc
+echo 'export PATH="$COREUTILSPATH/libexec/gnubin:$PATH"' >> $HOME/.zshrc
 brew install findutils
-echo 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> $HOME/.zshrc
+echo 'export PATH="$COREUTILSPATH/libexec/gnubin:$PATH"' >> $HOME/.zshrc
 brew install diffutils
 brew install grep
-echo 'export PATH="$(brew --prefix grep)/libexec/gnubin:$PATH"' >> $HOME/.zshrc
+echo 'export PATH="$COREUTILSPATH/libexec/gnubin:$PATH"' >> $HOME/.zshrc
 
 
 # Install and configure JENV

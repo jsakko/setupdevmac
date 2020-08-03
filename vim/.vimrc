@@ -14,6 +14,8 @@ set smartindent
 set autoindent
 set showmatch
 
+set ignorecase
+set smartcase
 " Search and escape search with ESC
 set hlsearch
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
